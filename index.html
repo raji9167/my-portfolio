@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+   <head>
+     <style>
+      *
+{
+    font-family:'poppins'sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+
+}
+
+
+html
+{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+body
+{
+    background:linear-gradient(to right,#1e3c72,#2a5298);
+    color:white;
+    font-family:'poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#contact
+{
+    background-color: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+.contact-form
+{
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    color: #0b3d91;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4 px 12px rgba(0, 0,0, 0.2);
+
+}
+.form-group
+{
+    text-align: left;
+    margin-bottom: 20px;
+}
+label
+{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+input,textarea
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color:rgba(0, 0,0, 0.7);
+    z-index: 100;
+    }
+.logo
+{
+    
+    cursor: pointer;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight:700;
+    font-family:'poppins';
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+.navbar ul li a{
+    display: inline-block;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+   /* padding: 6px 12px;*/
+    transition: 0.3s;
+}
+.navbar ul li a:hover{
+    background-color: #ff9800;
+    border-radius: 5px;
+}
+.home{
+    text-align: center;
+    height: 100vh;
+    justify-content:center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color:#f0f8ff ;
+    padding:20px 20px;
+
+    /*max-width: 900px;
+    margin: 40px auto;
+    background: rgb(77, 15, 15);
+    
+    border-radius: 12px;*/
+    /*box-shadow: 0 4px 15px rgba(0,0,0,0.1);*/
+}
+.home-content h3
+{
+    position: absolute;
+    top: 180px;
+    left: 80px;
+    text-align: center;
+    font-size:30px;
+   /* max-width: 600px;*/
+   margin-top:20px;
+    margin-bottom:10px;
+    color:#d62828;
+    font-weight:500;
+}
+.home-content h2
+{
+    position: absolute;
+    top:130px;
+    left: 80px;
+    text-align: center;
+    font-size:30px;
+    /*max-width: 600px;*/
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color:#dc651b;
+    font-weight:500;
+}
+
+.home-content h1{
+   position: absolute;
+    top:100px;
+    left:80px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight:500;
+    margin-top: 40px;
+   margin-bottom: 20px;
+    color: #1b0f9e;
+}
+
+.home-content p{
+    position:absolute;
+    bottom: 100px;
+    font-size: 18px;
+   max-width: 600px;
+    line-height: 1.6;
+    margin: 0 auto 25px auto;
+    color:#333;
+}
+
+/*.content
+{
+    display: none;
+    animation: fadeIn 0.5s;
+
+}
+.content:target
+{
+    display: block;
+}*/
+.home-img img{
+    position: absolute;
+    top:150px;
+    right: 50px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0, 0.2);
+}
+#home
+{
+    display: block;
+}
+
+/*.content h2{
+    color: #ff9800;
+    margin-bottom: 15px;
+}*/
+#skills {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+#skills .lead {
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.skills {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill label {
+  font-weight: 600;
+  color: #222;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.progress {
+  background: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 12px;
+}
+
+.bar {
+  height: 12px;
+  background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+  border-radius: 10px 0 0 10px;
+  transition: width 1s ease-in-out;
+}
+#tools
+{
+    padding: 40px 20px;
+    background-color: #f9f4ff;
+    text-align: center;
+}
+#tools h2{
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #6a0dad;
+}
+.tool-box-container
+{
+    display: flex;
+    justify-content:center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.tool-box
+{
+background:white;
+padding:20px;
+border-radius:15px;
+width: 200px;
+height: 200px;
+box-shadow: 0 4px 10px rgba(106, 13, 173, 0.2);
+transition: 0.3s;
+}
+.tool-box:hover
+{
+    box-shadow: 0 6px 12px rgba(0, 0,0, 0.2);
+}
+.tool-box img
+{
+    width:60px;
+    height:60px;
+    margin-bottom: 10px;
+}
+.about-section {
+  padding: 60px 20px;
+  background: white;
+  color: #333;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-left {
+  flex: 1;
+}
+
+.about-left h2 {
+  color: #0d6efd;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.about-left p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.about-right {
+  flex: 1;
+}
+
+.about-right h2 {
+  color: #0d6efd;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Skill bars */
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.bar {
+  background: #e9ecef;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 10px;
+  background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+  border-radius: 10px 0 0 10px;
+  transition: width 1s ease-in-out;
+}
+
+
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
+.about
+{
+    display:flex;
+    padding:50px ;
+    /*grid-template-columns: repeat(2,1fr);*/
+    align-items: center;
+    gap: 30px;
+    justify-content:center;
+}
+.about-img img{
+   /* padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;*/
+    width:300px;
+    border-radius:20px;
+}
+.about-text h2{
+    font-size: 60px;
+}
+.about-text p{
+    max-width: 500px;
+    color: aliceblue;
+    font-size: 20px;
+
+    line-height: 1.4;
+    margin-bottom: 4rem;
+} 
+
+.project-row {
+  display: flex;
+  justify-content: center;
+  align-items:stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+
+.project-card {
+  background:#000000c9;
+  padding: 20px;
+  border-radius: 14px;
+  width: 260px;
+  text-align: center;
+  color:#fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,255,136,0.3);
+}
+
+.project-img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+ 
+.logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.small-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.btn
+{
+    margin: 10px;
+    padding: 10px;
+    background-color:orangered;
+    border: 3px rgb(39, 7, 7,) solid;
+    border-radius: 10px;
+    position:absolute;
+    bottom:40px;
+    left:250px;
+}
+button
+{
+    margin: 10px;
+    padding: 10px;
+    background-color: #dc651b;
+    border:3px solid aliceblue;
+    border-radius: 10px;
+
+}
+    footer{
+        text-align: center;
+        padding: 15px;
+        background-color: #222;
+        color: white;
+        margin-top: 20px;
+    }
+    
+     </style>   
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">rr</a>
+        <nav class="navbar">
+            <ul>
+            <li><a href = "#home" >Home</a></li>
+            <li><a href = "#about" >About </a></li>
+            <li><a href = "#skills" >Skills</a></li>
+            <li><a href = "#projects" >Projects</a></li>
+            <li><a href = "#contact" >Contact </a></li>
+           </ul>
+            </nav>
+             </header>
+<section class="home" id="home">
+    <div class="home-content">
+<h1>Hi!</h1>
+<h2>I'm Rajeswari</h2>
+<h3> <strong>I'm a UI/UX Designer</strong></h3>
+<p>Passionate about creating<b> beautiful and user-friendly digital experiences.</b>I turn ideas into intuitive designs that delight users.<b>Explore my work </b>and<b> lets create something amazing together!</b></p>
+<div class="btn">Know More About Me</a>
+</div>
+<div class="home-img">
+<img src="profimg.jpg" alt="Rajeswari">
+</div>
+</div>
+</section>
+<section id="about" class="about-section">
+  <div class="about-container">
+    <!-- Left: About Me -->
+    <div class="about-left">
+      <h2>About Me</h2>
+      <p>
+        Hi! I’m <strong>Rajeswari</strong>, a passionate <strong>UI/UX Designer</strong> who enjoys creating
+        meaningful, user-friendly, and visually appealing designs.
+      </p>
+      <p>
+        I focus on blending creativity and technology using tools like
+        <strong>Figma, HTML, CSS, and JavaScript</strong> to design clean and responsive layouts.
+      </p>
+      <p>
+        I’m continuously learning to improve my design and front-end skills, aiming to build
+        digital products that are both functional and delightful to use.
+      </p>
+    </div>
+
+    
+<div class="about-right">
+      <h2>My Skills</h2>
+
+      <div class="skill">
+        <label>HTML</label>
+        <div class="bar"><div class="fill" style="width: 90%;"></div></div>
+      </div>
+
+      <div class="skill">
+        <label>CSS</label>
+        <div class="bar"><div class="fill" style="width: 85%;"></div></div>
+      </div>
+
+      <div class="skill">
+        <label>JavaScript</label>
+        <div class="bar"><div class="fill" style="width: 60%;"></div></div>
+      </div>
+
+      <div class="skill">
+        <label>Figma (UI/UX Design)</label>
+        <div class="bar"><div class="fill" style="width: 80%;"></div></div>
+      </div>
+
+      <div class="skill">
+        <label>WordPress</label>
+        <div class="bar"><div class="fill" style="width: 75%;"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+   <!-- ===== PROJECTS SECTION ===== -->
+<section id="projects" class="projects-section">
+  <h2>My Projects</h2>
+  <section id="projects" class="projects-section">
+  <div class="project-row">
+    <!-- Figma project -->
+    <div class="project-card">
+      <a href="https://www.figma.com/design/IvSmtxbSZSrsXPRSXsXjZ3/GREEN_SPROUT_B?node-id=0-1&t=6IJ9LsmylJLjiZOR-1" target="_blank">
+        <img src="fig1.png" alt="Figma Logo" class="project-img">
+      </a>
+      <h3>Figma-UI/UX Design Prototype</h3>
+      
+    </div>
+
+    <!-- EcoCart project (HTML + CSS) -->
+    <div class="project-card">
+      <a href="eco.html" target="_blank">
+        <div class="logo-row">
+          <img src="htcss.jpg" alt="HTML Logo" class="small-logo">
+          </div>
+      </a>
+      <h3>EcoCart – HTML + CSS</h3>
+      <p>Responsive e-commerce homepage built using HTML & CSS</p>
+    </div>
+  </div>
+  <!-- Portfolio project (Wordpress) -->
+    <div class="project-card">
+    
+        <div class="logo-row">
+          <img src="wp.png" alt="WordPress Logo" class="small-logo">
+          
+      </div>
+      </a>
+      <h3>WordPress</h3>
+      </div>
+  </div>
+   <!-- BudgetEase) -->
+    <div class="project-card">
+    
+        <div class="logo-row">
+          <img src="adobe.png" alt="adobe logo" class="small-logo">
+          </div>
+      </a>
+      <h3>Adobe XD</h3>
+      </div>
+  </div>
+</section>
+
+</section>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form class="contact-form contact-card">
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Your Name">
+    <div class="error"></div>
+  </div>
+
+  <div class="form-group">
+    <label for="email1">Email</label>
+    <input type="email" id="email1" placeholder="Your Email">
+    <div class="error"></div>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+    <div class="error"></div>
+  </div>
+<button type="submit" class="btn-primary">Send Message</button>
+</form>
+</section>
+<footer>
+  <p>© 2025 My Portfolio | Designed with HTML & CSS</p>
+</footer>
+
+
+<script>
+  const form = document.querySelector('.contact-form');   
+  const nameInput = document.getElementById('name');     
+  const emailInput = document.getElementById('email1');   
+  const msgInput = document.getElementById('message');   
+
+  function isEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.toLowerCase());
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // stop auto-refresh
+
+    const nameVal = nameInput.value.trim();
+    const emailVal = emailInput.value.trim();
+    const msgVal = msgInput.value.trim();
+
+    document.querySelectorAll('.error').forEach(e => e.textContent = '');
+
+    if (nameVal === '') {
+      nameInput.nextElementSibling.textContent = 'Name is required';
+      return;
+    }
+
+ 
+    if (emailVal === '') {
+      emailInput.nextElementSibling.textContent = 'Email is required';
+      return;
+    } else if (!isEmail(emailVal)) {
+      emailInput.nextElementSibling.textContent = 'Please enter a valid email';
+      return;
+    }
+
+    
+    if (msgVal === '') {
+      msgInput.nextElementSibling.textContent = 'Message is required';
+      return;
+    }
+
+    alert('Thank you, Your message was submitted successfully 🌸');
+    form.reset();
+  });
+</script>
+</body>
+</html>
+
+

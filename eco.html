@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCart-Sustainable Store</title>
+</head>
+<body>
+    <style>
+    /* EcoCart Internal CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #0c1f16;
+      color: #eaf5ed;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: #112d21;
+      padding: 15px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    header h1 {
+      color: #7ae582;
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+
+    nav a {
+      color: #eaf5ed;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #7ae582;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(160deg, rgba(122,229,130,0.2), rgba(52,211,153,0.1));
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #a8c5b3;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #7ae582;
+      color: #0c1f16;
+      padding: 12px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .btn:hover {
+      background: #34d399;
+    }
+
+    /* Section */
+    section {
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    /* Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      width: 90%;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,0.3);
+    }
+
+    /* Products */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      width: 90%;
+      margin: auto;
+    }
+
+    .product {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .product h3 {
+      margin-bottom: 10px;
+      color: #7ae582;
+    }
+
+    .price {
+      display: inline-block;
+      margin-top: 8px;
+      font-weight: 700;
+      color: #d9ffe2;
+    }
+
+    /* About */
+    .about {
+      background: rgba(255,255,255,0.03);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 60px 20px;
+    }
+
+    .about ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .about li {
+      margin: 5px 0;
+      color: #b8d6c2;
+    }
+
+   
+    footer {
+      background: #112d21;
+      text-align: center;
+      padding: 20px;
+      color: #a8c5b3;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+ 
+  <header>
+    <h1>🌿 EcoCart</h1>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  
+  <section class="hero">
+    <h2>Shop Sustainably. Live Better.</h2>
+    <p>Discover eco-friendly products made for a greener planet. Join the movement with EcoCart!</p>
+    <a href="#shop" class="btn">Shop Now</a>
+  </section>
+
+  <section id="categories">
+    <h2 class="section-title">Shop by Category</h2>
+    <div class="card-grid">
+      <div class="card">🍃 Kitchen Reusables</div>
+      <div class="card">🧼 Bath & Body</div>
+      <div class="card">🧽 Cleaning</div>
+      <div class="card">👜 On-the-Go</div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <h3>🌸 Reusable Cup</h3>
+        <img src="reuse.jpg" alt="reuse">
+        <p>Collapsible silicone cup – eco-friendly & stylish.</p>
+        <span class="price">₹499</span>
+      </div>
+      <div class="product">
+        <h3>🍯 Beeswax Wraps</h3>
+        <img src="bee.jpg" alt="bee">
+        <p>Say goodbye to plastic – keep your food fresh.</p>
+        <span class="price">₹349</span>
+      </div>
+      <div class="product">
+        <h3>🌾 Coconut Brush</h3>
+        <img src="coco1.jpg" alt="coconut">
+        <p>Natural scrubbing brush made from coconut fibres.</p>
+        <span class="price">₹299</span>
+      </div>
+      <div class="product">
+        <h3>🧴 Charcoal Soap</h3>
+        <img src="char.jpg" alt="char">
+        <p>Handmade detox soap bar with natural ingredients.</p>
+        <span class="price">₹199</span>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="about" class="about">
+    <h2>Our Promise</h2>
+    <p>We bring sustainable, locally sourced products to help reduce waste and protect the planet.</p>
+    <ul>
+      <li>♻️ Plastic-Free Packaging</li>
+      <li>🚚 Carbon-Neutral Shipping</li>
+      <li>🌿 Eco-friendly Materials</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 EcoCart – Designed using HTML & CSS only.</p>
+  </footer>
+</body>
+</html>
+</body>
+</html>
