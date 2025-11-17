@@ -398,53 +398,100 @@ transition: 0.3s;
     line-height: 1.4;
     margin-bottom: 4rem;
 } 
-
-.project-row {
-  display: flex;
-  justify-content: center;
-  align-items:stretch;
-  gap: 40px;
-  flex-wrap: wrap;
-  padding: 40px 0;
-}
-
-
-.project-card {
-  background:#000000c9;
-  padding: 20px;
-  border-radius: 14px;
-  width: 260px;
+/* Projects section */
+#projects {
+  padding: 48px 0;
   text-align: center;
-  color:#fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  
+  background: linear-gradient(#1b4ea3 0%, #1b59b8 100%); 
+  color: #fff;
 }
 
+/* grid container (mobile first) */
+.project-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  justify-items: center;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* card */
+.project-card {
+  width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  transition: transform .18s ease, box-shadow .18s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* hover effect */
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0,255,136,0.3);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.35);
 }
 
-.project-img {
-  width: 80px;
-  height: auto;
-  margin-bottom: 10px;
+
+.project-card .project-img {
+  width: 100%;
+  height: 180px;
+  display: block;
+  object-fit: cover; 
+  background: #111;
 }
 
- 
-.logo-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
+.project-card .small-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 22px auto 6px;
+  display: block;
 }
 
-.small-logo {
-  width: 80px;
-  height: auto;
-  margin-bottom: 10px;
+
+.project-body {
+  padding: 16px 18px 22px;
+  text-align: center;
 }
+.project-body h3 {
+  margin: 6px 0 8px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.project-body p {
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+@media (min-width: 700px) {
+  .project-row { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1100px) {
+  .project-row { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+#projects h2 { 
+  color: #fff;
+   margin: 0 0 10px; 
+   font-size: 28px;
+   }
+#projects .subtitle 
+{ 
+  color: rgba(255,255,255,0.9);
+   margin-bottom: 18px;
+    font-size: 14px;
+   }
+
 .btn
 {
     margin: 10px;
@@ -521,7 +568,7 @@ button
     </div>
 
     
-<div class="about-right">
+<div id ="skills"class="about-right">
       <h2>My Skills</h2>
 
       <div class="skill">
@@ -554,52 +601,50 @@ button
    <!-- ===== PROJECTS SECTION ===== -->
 <section id="projects" class="projects-section">
   <h2>My Projects</h2>
-  <section id="projects" class="projects-section">
   <div class="project-row">
-    <!-- Figma project -->
+   <!-- Figma project -->
     <div class="project-card">
-      <a href="https://www.figma.com/design/IvSmtxbSZSrsXPRSXsXjZ3/GREEN_SPROUT_B?node-id=0-1&t=6IJ9LsmylJLjiZOR-1" target="_blank">
-        <img src="fig1.png" alt="Figma Logo" class="project-img">
+      <a href="https://www.figma.com/design/IvSmtxbSZSrsXPRSXsXjZ3/GREEN_SPROUT_B?node-id=2-2&m=dev&t=cDuYRMT2Ggpqd3Ay-1" target="_blank" rel="noopener">
+      <img src="fig1.png" alt="Figma Logo" class="small-logo">
+    </a>
+       <div class="project-body">
+<h3>Figma-UI/UX Design Prototype</h3>
+<p>Figma based app Prototype and wireframe visuals</p>
+</div>
+</div>
+        <!-- EcoCart project (HTML + CSS) -->
+    <div class="project-card">
+      <a href="eco.html" target="_blank" rel="noopener">
+      <img src="htcss.jpg" alt="HTML Logo" class="small-logo">
       </a>
-      <h3>Figma-UI/UX Design Prototype</h3>
-      
-    </div>
-
-    <!-- EcoCart project (HTML + CSS) -->
-    <div class="project-card">
-      <a href="eco.html" target="_blank">
-        <div class="logo-row">
-          <img src="htcss.jpg" alt="HTML Logo" class="small-logo">
+      <div class="project-body">
+          <h3>EcoCart – HTML + CSS</h3>
+          <p>Responsive e-commerce homepage built using HTML & CSS</p>
           </div>
-      </a>
-      <h3>EcoCart – HTML + CSS</h3>
-      <p>Responsive e-commerce homepage built using HTML & CSS</p>
     </div>
-  </div>
+    
   <!-- Portfolio project (Wordpress) -->
     <div class="project-card">
-    
-        <div class="logo-row">
-          <img src="wp.png" alt="WordPress Logo" class="small-logo">
-          
-      </div>
-      </a>
-      <h3>WordPress</h3>
-      </div>
-  </div>
-   <!-- BudgetEase) -->
-    <div class="project-card">
-    
-        <div class="logo-row">
-          <img src="adobe.png" alt="adobe logo" class="small-logo">
+       <a href="https://dev-rajeswariwp.pantheonsite.io/" target="_blank" rel="noopener">
+    <img src="wordplogo.png" alt="WordPress Logo" class="small-logo" >
+   </a>
+<div class="project-body">
+<h3>WordPress</h3>
+<p>CMS site built with WordPress/Elementor(live link)</p>
           </div>
-      </a>
-      <h3>Adobe XD</h3>
-      </div>
-  </div>
-</section>
-
-</section>
+    </div>
+      <!-- BudgetEase) -->
+    <div class="project-row">
+      <a href="https://dev-rajeswariwp.pantheonsite.io/" target="_blank" rel="noopener">
+     <img src="adobelogo.jpg" alt="adobe logo" class="small-logo">
+    
+         <div class="project-body">
+         <h3>Adobe XD</h3>
+         <p>CMS site built with WordPress/Elementor(live link)</p>
+          </div>
+           </a>
+    </div>
+      </section>
 <section id="contact">
   <h2>Contact Me</h2>
   <form class="contact-form contact-card">
